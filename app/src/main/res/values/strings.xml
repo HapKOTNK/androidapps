@@ -17,4 +17,6 @@
     <string name="cheat_button">Cheat!</string>
     <string name="judgment_toast">Cheating is wrong.</string>
     <string name="title_activity_cheat">CheatActivity</string>
+    <string name="api" />
+    <string name="API_android">API Level 28</string>
 </resources>
