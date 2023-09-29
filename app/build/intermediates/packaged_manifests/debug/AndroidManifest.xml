@@ -29,6 +29,16 @@
         android:testOnly="true"
         android:theme="@style/Theme.GeoQuiz" >
         <activity
+            android:name="com.bignerdranch.android.geoquiz.CheatActivity"
+            android:exported="false"
+            android:label="@string/title_activity_cheat"
+            android:theme="@style/Theme.GeoQuiz" />
+        <activity
+            android:name="com.example.geoquiz.CheatActivity"
+            android:exported="false"
+            android:label="@string/title_activity_cheat"
+            android:theme="@style/Theme.GeoQuiz" />
+        <activity
             android:name="com.bignerdranch.android.geoquiz.MainActivity"
             android:exported="true" >
             <intent-filter>
@@ -37,6 +47,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="androidx.activity.ComponentActivity"
+            android:exported="true" />
+        <activity
+            android:name="androidx.compose.ui.tooling.PreviewActivity"
+            android:exported="true" />
 
         <provider
             android:name="androidx.startup.InitializationProvider"
