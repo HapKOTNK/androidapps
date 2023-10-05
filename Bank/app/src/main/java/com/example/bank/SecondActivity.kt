@@ -8,7 +8,7 @@ class SecondActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
-d
+
         val resultTextView = findViewById<TextView>(R.id.resultTextView)
         val result = intent.getDoubleExtra("result", 0.0)
 
