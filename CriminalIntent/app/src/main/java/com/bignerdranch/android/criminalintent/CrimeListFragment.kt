@@ -53,6 +53,7 @@ class CrimeListFragment: Fragment() {
 
         private val titleTextView: TextView = itemView.findViewById(R.id.crime_title)
         private val dateTextView: TextView = itemView.findViewById(R.id.crime_date)
+        private val trueTextView: TextView = itemView.findViewById(R.id.crime_true)
 
         init {
             itemView.setOnClickListener(this)
@@ -62,6 +63,7 @@ class CrimeListFragment: Fragment() {
             this.crime = crime
             titleTextView.text = this.crime.title
             dateTextView.text = this.crime.date.toString()
+            trueTextView.text = this.crime.ctrue.toString()
         }
 
         override fun onClick(v: View) {
