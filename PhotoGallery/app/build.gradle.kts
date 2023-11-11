@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("org.jetbrains.kotlin.kapt")
 }
 
 android {
@@ -15,6 +16,8 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+
     }
 
     buildTypes {
@@ -33,9 +36,15 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+
+    buildFeatures {
+        viewBinding = true
+    }
 }
 
 dependencies {
+    implementation("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.12.0")
     implementation("androidx.work:work-runtime:2.8.1")
     implementation("com.squareup.picasso:picasso:2.8")
     implementation("androidx.lifecycle:lifecycle-extensions:2.0.0")
@@ -52,4 +61,7 @@ dependencies {
     implementation("androidx.core:core-ktx:1.0.0")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+    implementation ("androidx.room:room-runtime:2.5.0")
+    kapt("androidx.room:room-compiler:2.5.0")
 }
